@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 set -e
-go vet "$(go list ./... | grep -v /vendor/)"
+# shellcheck disable=SC2046
+go vet $(go list ./... | grep -v /vendor/)
